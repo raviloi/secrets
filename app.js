@@ -36,7 +36,7 @@ app.use(passport.session());
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/userDB');
+  await mongoose.connect('mongodb+srv://coltravi:StK29w2fHgsidSE2@cluster0.kuzhpg3.mongodb.net/userDB');
 }
 
 const userSchema = new mongoose.Schema ({
