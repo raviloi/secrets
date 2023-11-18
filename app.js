@@ -69,7 +69,7 @@ passport.deserializeUser(function(user, done) {
 passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  callbackURL: "https://submit-your-secrets-anonymously.onrender.com/auth/google/secrets"
+  callbackURL: "http://localhost:3000/auth/google/secrets"
 },
 function(accessToken, refreshToken, profile, cb) {
   User.findOrCreate({ googleId: profile.id }, function (err, user) {
